@@ -7,7 +7,7 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
-/*
+
             #region Zmienne
             Console.WriteLine("Type in your name: ");
 
@@ -226,7 +226,7 @@ namespace FirstProject
 
             string userInputs = Console.ReadLine();
             int yearOfBirths;
-            if(int.TryParse(userInputs,out yearOfBirths))
+            if (int.TryParse(userInputs, out yearOfBirths))
             {
                 int age = DateTime.Now.Year - yearOfBirths;
                 Console.WriteLine("Your age is: " + age);
@@ -246,9 +246,9 @@ namespace FirstProject
             Console.WriteLine("Podaj teraz swój wzrost (metry): ");
             double wzrost = Convert.ToDouble(Console.ReadLine());
 
-            double bmi = waga / (Math.Pow(wzrost,wzrost));
-            
-            if(bmi >= 35)
+            double bmi = waga / (Math.Pow(wzrost, wzrost));
+
+            if (bmi >= 35)
             {
                 Console.WriteLine("Otyłość olbrzymia");
             }
@@ -272,7 +272,7 @@ namespace FirstProject
             Console.WriteLine("Twoje BMI wynosi: " + bmi);
 
             #endregion
-*/
+
             #region Tablice i pętle
 
             string[] cars = { "Volvo", "BMW", "Audi", "Lexus", "Porsche", "Mazda"};
