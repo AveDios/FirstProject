@@ -7,7 +7,7 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
-
+/*
             #region Zmienne
             Console.WriteLine("Type in your name: ");
 
@@ -272,8 +272,8 @@ namespace FirstProject
             Console.WriteLine("Twoje BMI wynosi: " + bmi);
 
             #endregion
-
-            #region Tablice
+*/
+            #region Tablice i pętle
 
             string[] cars = { "Volvo", "BMW", "Audi", "Lexus", "Porsche", "Mazda"};
             Console.WriteLine(cars[0]);
@@ -283,8 +283,68 @@ namespace FirstProject
 
             Console.WriteLine(cars[cars.Length - 1]);
 
+            Console.WriteLine("**************************");
 
+
+            // Pętla while
+
+            int i = 0;
+            while(i < cars.Length)
+            {
+                Console.WriteLine(cars[i]);
+                if (cars[i] == "BMW") // Jeżeli program znajdzie pole w tablicy o nazwnie "BMW" to działanie pętli zakończy sie
+                {
+                    Console.WriteLine("Bye");
+                    break;
+                }
+                i++;
+            }
+
+
+
+            // Pętla do-while
+
+            Console.WriteLine("To exit, type 'x'");
+            string toExit;
+
+            do // Mamy pewność że pętla wykona się minimum 1 raz
+            {
+                toExit = Console.ReadLine();
+                Console.WriteLine($"Echo: {toExit} ");
+            } while (toExit != "x"); // Jeżeli wpiszemy cos innego niż x to pętla będzie sie powtarzałć, za to jak wpiszemy pętla przestanie działać
+
+
+
+            // Pętla for
+
+            for(int j =  0; j < cars.Length; j++)
+            {
+                Console.WriteLine(cars[j]); // wypisze nam to wszystko co jest w tabeli cars
+                if (cars[j] == "BMW")
+                {
+                    Console.WriteLine("Bye"); // Jeżeli wypisze "BMW" to pętla się zamknie
+                    break;
+                }
+            }
+
+            Console.WriteLine("****************************");
+
+            // Pętla foreach
+
+            foreach (string car in cars)
+            {
+                Console.WriteLine(car);
+                if (car == "BMW")
+                {
+                    Console.WriteLine("Bye");
+                    break;
+                }
+            }
+
+            
             #endregion
+
+
         }
     }
 
